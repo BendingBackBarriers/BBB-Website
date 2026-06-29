@@ -1,0 +1,70 @@
+{
+  "routes": [
+    {
+      "route": "/home",
+      "redirect": "/index.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/about",
+      "redirect": "/about.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/programs",
+      "redirect": "/programs.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/team",
+      "redirect": "/team.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/leadership",
+      "redirect": "/team.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/partners",
+      "redirect": "/partners.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/contact",
+      "redirect": "/contact.html",
+      "statusCode": 301
+    },
+    {
+      "route": "/donate",
+      "redirect": "/donate.html",
+      "statusCode": 301
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": [
+      "/img/**",
+      "/css/**",
+      "/js/**",
+      "*.{png,jpg,gif,svg,ico,webp,woff,woff2,ttf}"
+    ]
+  },
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "X-XSS-Protection": "1; mode=block",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+    "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';"
+  },
+  "mimeTypes": {
+    ".json": "text/json"
+  }
+}

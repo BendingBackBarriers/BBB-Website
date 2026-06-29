@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Bending Back Barriers — donate, volunteer, partner, or reach out with questions." />
+  <title>Contact Us | Bending Back Barriers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="img/Bending-Back-Barriers-Logo.png" alt="Bending Back Barriers logo" class="nav-logo-img" />
+      <div class="nav-logo-text">Bending Back Barriers<span>Removing Barriers to Student Success</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <a href="about.html">About</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html#mission">Mission &amp; Vision</a></li>
+          <li><a href="about.html#values">Our Values</a></li>
+          <li><a href="about.html#story">Our Story</a></li>
+        </ul>
+      </li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="team.html">Leadership</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="donate.html" class="btn btn-gold">Donate</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="team.html">Leadership</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="btn btn-gold">Donate Now</a>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-label">Reach Out</span>
+        <h1>Contact Us</h1>
+        <p>Whether you want to donate, volunteer, partner, or simply learn more — we'd love to hear from you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info side -->
+        <div class="contact-info">
+          <span class="section-label">Get In Touch</span>
+          <h2>We're Here to Help</h2>
+          <p>
+            Have a question about our programs? Interested in volunteering,
+            donating, or becoming a school or corporate partner? Reach out and
+            a member of our team will be in touch.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📧</div>
+              <div class="contact-detail-text">
+                <h4>Email</h4>
+                <a href="mailto:info@bendingbackbarriers.org">info@bendingbackbarriers.org</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <h4>Service Area</h4>
+                <p>Philadelphia, PA &amp; Surrounding Communities</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🏛️</div>
+              <div class="contact-detail-text">
+                <h4>Registration</h4>
+                <p>Registered 501(c)(3) Nonprofit<br/>EIN: 81-3263291</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:40px;">
+            <h4 style="font-family:var(--font-heading);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--navy);margin-bottom:16px;">Follow Us</h4>
+            <div style="display:flex;gap:12px;">
+              <a href="#" class="social-btn" style="background:var(--navy);color:var(--white);" aria-label="Facebook">f</a>
+              <a href="#" class="social-btn" style="background:var(--navy);color:var(--white);" aria-label="Instagram">&#9679;</a>
+              <a href="#" class="social-btn" style="background:var(--navy);color:var(--white);" aria-label="Twitter/X">𝕏</a>
+              <a href="#" class="social-btn" style="background:var(--navy);color:var(--white);" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form side -->
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name *</label>
+                <input type="text" id="first-name" name="first-name" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name *</label>
+                <input type="text" id="last-name" name="last-name" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="interest">I'm interested in…</label>
+              <select id="interest" name="interest">
+                <option value="">Select one</option>
+                <option value="donate">Making a Donation</option>
+                <option value="volunteer">Volunteering</option>
+                <option value="partner">Corporate / School Partnership</option>
+                <option value="programs">Learning About Programs</option>
+                <option value="media">Media / Press Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="organization">Organization (if applicable)</label>
+              <input type="text" id="organization" name="organization" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell us how you'd like to get involved or ask us anything…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold form-submit">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO HELP QUICK LINKS -->
+  <section style="background:var(--light);padding:80px 0;">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:48px;">
+        <span class="section-label">Ways to Help</span>
+        <h2 class="section-title">Other Ways to Get Involved</h2>
+      </div>
+      <div class="help-grid" style="max-width:900px;margin:0 auto;">
+        <div class="help-card" style="background:var(--white);border:1px solid #e2e8f0;">
+          <div class="help-icon">💛</div>
+          <h3>Donate</h3>
+          <p>Make a one-time or recurring gift to directly fund student support programs.</p>
+          <a href="donate.html" class="btn btn-gold">Give Now</a>
+        </div>
+        <div class="help-card" style="background:var(--white);border:1px solid #e2e8f0;">
+          <div class="help-icon">🤝</div>
+          <h3>Volunteer</h3>
+          <p>Share your time as a tutor, mentor, or event volunteer.</p>
+          <a href="contact.html?interest=volunteer" class="btn btn-outline-navy">Sign Up</a>
+        </div>
+        <div class="help-card" style="background:var(--white);border:1px solid #e2e8f0;">
+          <div class="help-icon">🏢</div>
+          <h3>Partner With Us</h3>
+          <p>Bring your business or school into our growing network of community partners.</p>
+          <a href="contact.html?interest=partner" class="btn btn-outline-navy">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/Bending-Back-Barriers-Logo.png" alt="Bending Back Barriers logo" class="footer-logo-img" />
+          <div class="nav-logo-text">Bending Back Barriers<span>Removing Barriers to Student Success</span></div>
+          <p>A registered 501(c)(3) nonprofit organization committed to strengthening educational outcomes for underserved children and teens in and around Philadelphia.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Facebook">f</a>
+            <a href="#" class="social-btn" aria-label="Instagram">&#9679;</a>
+            <a href="#" class="social-btn" aria-label="Twitter/X">𝕏</a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          </div>
+          <div class="ein-badge">&#9679; EIN: 81-3263291</div>
+        </div>
+        <div class="footer-col">
+          <h4>Organization</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#mission">Mission &amp; Vision</a></li>
+            <li><a href="team.html">Leadership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html?interest=volunteer">Volunteer</a></li>
+            <li><a href="contact.html?interest=partner">Become a Sponsor</a></li>
+            <li><a href="programs.html">Our Programs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <address>
+            Philadelphia, PA<br/>&amp; Surrounding Communities<br/><br/>
+            <a href="mailto:info@bendingbackbarriers.org">info@bendingbackbarriers.org</a><br/>
+            <a href="contact.html">Send a Message</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; <span id="year"></span> Bending Back Barriers. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Pre-select interest from URL param
+    const params = new URLSearchParams(window.location.search);
+    const interest = params.get('interest');
+    if (interest) {
+      const sel = document.getElementById('interest');
+      if (sel) sel.value = interest;
+    }
+  </script>
+</body>
+</html>

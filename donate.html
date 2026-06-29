@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Donate to Bending Back Barriers and help remove barriers to student success in Philadelphia." />
+  <title>Donate | Bending Back Barriers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <style>
+    .donate-hero {
+      background: var(--navy-dark);
+      padding: 140px 0 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .donate-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--navy-dark), rgba(0,56,117,0.5));
+    }
+    .donate-hero-content { position: relative; z-index: 2; }
+    .donate-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      color: var(--white);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .donate-hero p {
+      color: rgba(255,255,255,0.75);
+      font-size: 1.1rem;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .donate-section {
+      padding: 100px 0;
+    }
+
+    .donate-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .donate-amounts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .amount-btn {
+      border: 2px solid #e2e8f0;
+      background: var(--white);
+      border-radius: 6px;
+      padding: 16px 8px;
+      text-align: center;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--navy);
+      transition: all 0.2s;
+    }
+
+    .amount-btn:hover,
+    .amount-btn.selected {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .amount-btn small {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-top: 4px;
+    }
+
+    .donate-card {
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.1);
+      padding: 40px 36px;
+    }
+
+    .donate-card h3 {
+      font-size: 1.1rem;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 28px;
+    }
+
+    .impact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .impact-list-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px;
+      background: var(--light);
+      border-radius: 6px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .impact-list-item .amount {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      white-space: nowrap;
+      min-width: 60px;
+    }
+
+    .impact-list-item p {
+      font-size: 0.88rem;
+      color: var(--gray);
+      margin: 0;
+      padding-top: 2px;
+    }
+
+    .tax-note {
+      background: rgba(245,166,35,0.1);
+      border: 1px solid rgba(245,166,35,0.3);
+      border-radius: 6px;
+      padding: 16px 20px;
+      font-size: 0.85rem;
+      color: #7a5a00;
+      margin-top: 28px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .donate-grid { grid-template-columns: 1fr; }
+      .donate-amounts { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .donate-amounts { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="img/Bending-Back-Barriers-Logo.png" alt="Bending Back Barriers logo" class="nav-logo-img" />
+      <div class="nav-logo-text">Bending Back Barriers<span>Removing Barriers to Student Success</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-dropdown">
+        <a href="about.html">About</a>
+        <ul class="dropdown-menu">
+          <li><a href="about.html#mission">Mission &amp; Vision</a></li>
+          <li><a href="about.html#values">Our Values</a></li>
+          <li><a href="about.html#story">Our Story</a></li>
+        </ul>
+      </li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="team.html">Leadership</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="btn btn-gold active">Donate</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="team.html">Leadership</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+    <a href="donate.html" class="btn btn-gold">Donate Now</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="donate-hero">
+    <div class="donate-hero-content container">
+      <span class="section-label">Make a Difference</span>
+      <h1>Donate Today</h1>
+      <p>
+        Every gift — no matter the size — directly removes barriers for at-risk
+        students in Philadelphia and surrounding communities.
+      </p>
+    </div>
+  </section>
+
+  <!-- DONATE SECTION -->
+  <section class="donate-section">
+    <div class="container">
+      <div class="donate-grid">
+
+        <!-- DONATE FORM / BUTTON SIDE -->
+        <div>
+          <span class="section-label">Your Gift</span>
+          <h2 class="section-title">Choose Your Impact</h2>
+          <p style="color:var(--gray);margin-bottom:32px;font-size:0.97rem;">
+            Select a giving level below or enter a custom amount. All donations are
+            tax-deductible to the fullest extent of the law.
+          </p>
+
+          <div class="donate-card">
+            <h3>Make a Donation</h3>
+
+            <div class="donate-amounts" id="donate-amounts">
+              <button class="amount-btn" data-amount="25" onclick="selectAmount(this)">
+                $25<small>Supplies</small>
+              </button>
+              <button class="amount-btn" data-amount="50" onclick="selectAmount(this)">
+                $50<small>Meals</small>
+              </button>
+              <button class="amount-btn selected" data-amount="100" onclick="selectAmount(this)">
+                $100<small>Technology</small>
+              </button>
+              <button class="amount-btn" data-amount="250" onclick="selectAmount(this)">
+                $250<small>Counseling</small>
+              </button>
+              <button class="amount-btn" data-amount="500" onclick="selectAmount(this)">
+                $500<small>Program Month</small>
+              </button>
+              <button class="amount-btn" data-amount="custom" onclick="selectAmount(this)">
+                Custom<small>Amount</small>
+              </button>
+            </div>
+
+            <div class="form-group" id="custom-amount-group" style="display:none;">
+              <label for="custom-amount">Enter Custom Amount ($)</label>
+              <input type="number" id="custom-amount" name="custom-amount" min="1" placeholder="Enter amount" />
+            </div>
+
+            <div style="display:flex;gap:12px;margin-top:8px;">
+              <button class="btn btn-gold" style="flex:1;font-size:0.9rem;" onclick="donate('once')">
+                Give Once
+              </button>
+              <button class="btn btn-outline-navy" style="flex:1;font-size:0.9rem;" onclick="donate('monthly')">
+                Give Monthly
+              </button>
+            </div>
+
+            <p style="font-size:0.78rem;color:var(--gray);text-align:center;margin-top:12px;">
+              You will be redirected to our secure Givebutter donation page.
+            </p>
+
+            <div class="tax-note">
+              &#9679; Bending Back Barriers is a registered 501(c)(3) nonprofit (EIN: 81-3263291).
+              Donations are tax-deductible to the fullest extent permitted by law.
+              You will receive a donation receipt via email.
+            </div>
+          </div>
+        </div>
+
+        <!-- IMPACT SIDE -->
+        <div>
+          <span class="section-label">Your Impact</span>
+          <h2 class="section-title">What Your Gift Does</h2>
+          <div class="impact-list">
+            <div class="impact-list-item">
+              <span class="amount">$25</span>
+              <p>Provides a full set of school supplies for one student — backpack, notebooks, pencils, and more.</p>
+            </div>
+            <div class="impact-list-item">
+              <span class="amount">$50</span>
+              <p>Covers nutritional support and meals for one student for an entire week.</p>
+            </div>
+            <div class="impact-list-item">
+              <span class="amount">$100</span>
+              <p>Contributes toward a tablet or device that gives a student access to technology at home.</p>
+            </div>
+            <div class="impact-list-item">
+              <span class="amount">$250</span>
+              <p>Funds individual counseling sessions for a student facing trauma or emotional challenges.</p>
+            </div>
+            <div class="impact-list-item">
+              <span class="amount">$500</span>
+              <p>Supports one full month of program delivery — academic tutoring, supplies, and wellness services — for a classroom.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:32px;padding:24px;background:var(--navy);border-radius:6px;text-align:center;">
+            <p style="font-family:var(--font-heading);font-size:0.85rem;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;">
+              Other Ways to Give
+            </p>
+            <p style="font-size:0.88rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:16px;">
+              Interested in a corporate match, in-kind donation, or planned giving?
+              Contact us to discuss options.
+            </p>
+            <a href="contact.html?interest=donate" class="btn btn-gold" style="font-size:0.8rem;padding:10px 24px;">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/Bending-Back-Barriers-Logo.png" alt="Bending Back Barriers logo" class="footer-logo-img" />
+          <div class="nav-logo-text">Bending Back Barriers<span>Removing Barriers to Student Success</span></div>
+          <p>A registered 501(c)(3) nonprofit organization committed to strengthening educational outcomes for underserved children and teens in and around Philadelphia.</p>
+          <div class="footer-social">
+            <a href="#" class="social-btn" aria-label="Facebook">f</a>
+            <a href="#" class="social-btn" aria-label="Instagram">&#9679;</a>
+            <a href="#" class="social-btn" aria-label="Twitter/X">𝕏</a>
+            <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+          </div>
+          <div class="ein-badge">&#9679; EIN: 81-3263291</div>
+        </div>
+        <div class="footer-col">
+          <h4>Organization</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#mission">Mission &amp; Vision</a></li>
+            <li><a href="team.html">Leadership</a></li>
+            <li><a href="partners.html">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Get Involved</h4>
+          <ul>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html?interest=volunteer">Volunteer</a></li>
+            <li><a href="contact.html?interest=partner">Become a Sponsor</a></li>
+            <li><a href="programs.html">Our Programs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <address>
+            Philadelphia, PA<br/>&amp; Surrounding Communities<br/><br/>
+            <a href="mailto:info@bendingbackbarriers.org">info@bendingbackbarriers.org</a><br/>
+            <a href="contact.html">Send a Message</a>
+          </address>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Copyright &copy; <span id="year"></span> Bending Back Barriers. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function selectAmount(btn) {
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      const customGroup = document.getElementById('custom-amount-group');
+      customGroup.style.display = btn.dataset.amount === 'custom' ? 'block' : 'none';
+    }
+
+    function donate(frequency) {
+      const selected = document.querySelector('.amount-btn.selected');
+      let amount = selected ? selected.dataset.amount : '100';
+      if (amount === 'custom') {
+        amount = document.getElementById('custom-amount').value;
+        if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
+          alert('Please enter a valid donation amount.');
+          return;
+        }
+      }
+
+      const donateUrl = new URL('https://givebutter.com/SzOyjr');
+      donateUrl.searchParams.set('utm_source', 'bbb_website');
+      donateUrl.searchParams.set('utm_medium', 'donate_page');
+      donateUrl.searchParams.set('frequency', frequency);
+      donateUrl.searchParams.set('amount', String(amount));
+
+      window.location.href = donateUrl.toString();
+    }
+  </script>
+</body>
+</html>
