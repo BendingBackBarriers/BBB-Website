@@ -93,6 +93,66 @@ document.querySelectorAll('.program-card, .help-card, .team-card, .info-card, .i
   revealObserver.observe(el);
 });
 
+// --- Featured program carousel ---
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const slides = [
+    {
+      src: 'img/STEM-Class1%20(1).png',
+      alt: 'STEM workshop room',
+      caption: 'STEM workshop room'
+    },
+    {
+      src: 'img/STEM-Class2%20(1).png',
+      alt: 'STEM workshop presentation screen',
+      caption: 'STEM presentation screen'
+    },
+    {
+      src: 'img/sflWebsiteSS.png',
+      alt: 'STEM workshop website screenshot',
+      caption: 'Workshop website screenshot'
+    },
+    {
+      src: 'img/sfl_pic%20(1).jpg',
+      alt: 'STEM workshop proof screenshot',
+      caption: 'Workshop proof screenshot'
+    }
+  ];
+
+  const image = carousel.querySelector('[data-carousel-image]');
+  const caption = carousel.querySelector('[data-carousel-caption]');
+  const counter = carousel.querySelector('[data-carousel-counter]');
+  const prevButton = carousel.querySelector('[data-carousel-prev]');
+  const nextButton = carousel.querySelector('[data-carousel-next]');
+  const thumbs = carousel.querySelectorAll('[data-carousel-thumb]');
+  let currentIndex = 0;
+
+  function updateCarousel(index) {
+    currentIndex = (index + slides.length) % slides.length;
+    const slide = slides[currentIndex];
+    image.src = slide.src;
+    image.alt = slide.alt;
+    caption.textContent = slide.caption;
+    counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+
+    thumbs.forEach((thumb) => {
+      const thumbIndex = Number(thumb.dataset.carouselThumb);
+      thumb.classList.toggle('is-active', thumbIndex === currentIndex);
+      thumb.setAttribute('aria-selected', thumbIndex === currentIndex ? 'true' : 'false');
+    });
+  }
+
+  prevButton.addEventListener('click', () => updateCarousel(currentIndex - 1));
+  nextButton.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+      updateCarousel(Number(thumb.dataset.carouselThumb));
+    });
+  });
+
+  updateCarousel(0);
+});
+
 // --- Contact form handler ---
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
