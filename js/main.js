@@ -95,35 +95,20 @@ document.querySelectorAll('.program-card, .help-card, .team-card, .info-card, .i
 
 // --- Featured program carousel ---
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
-  const slides = [
-    {
-      src: 'img/STEM-Class1%20(1).png',
-      alt: 'STEM workshop room',
-      caption: 'STEM workshop room'
-    },
-    {
-      src: 'img/STEM-Class2%20(1).png',
-      alt: 'STEM workshop presentation screen',
-      caption: 'STEM presentation screen'
-    },
-    {
-      src: 'img/sflWebsiteSS.png',
-      alt: 'STEM workshop website screenshot',
-      caption: 'Workshop website screenshot'
-    },
-    {
-      src: 'img/sfl_pic%20(1).jpg',
-      alt: 'STEM workshop proof screenshot',
-      caption: 'Workshop proof screenshot'
-    }
-  ];
-
   const image = carousel.querySelector('[data-carousel-image]');
-  const caption = carousel.querySelector('[data-carousel-caption]');
   const counter = carousel.querySelector('[data-carousel-counter]');
   const prevButton = carousel.querySelector('[data-carousel-prev]');
   const nextButton = carousel.querySelector('[data-carousel-next]');
   const thumbs = carousel.querySelectorAll('[data-carousel-thumb]');
+  const slides = Array.from(thumbs).map((thumb) => ({
+    src: thumb.dataset.src,
+    alt: thumb.dataset.alt || ''
+  }));
+
+  if (!slides.length) {
+    return;
+  }
+
   let currentIndex = 0;
 
   function updateCarousel(index) {
@@ -131,7 +116,6 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const slide = slides[currentIndex];
     image.src = slide.src;
     image.alt = slide.alt;
-    caption.textContent = slide.caption;
     counter.textContent = `${currentIndex + 1} / ${slides.length}`;
 
     thumbs.forEach((thumb) => {
